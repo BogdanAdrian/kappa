@@ -1,0 +1,43 @@
+.stylish-button {
+  position: relative;
+  padding: 25px 40px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color .4s, background-color .4s;
+  transition-timing-function: linear;
+
+  &:hover {
+    color: #000;
+    background-color: #fff;
+    &:before,
+    &:after {
+      display: block;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    border: 1px solid white;
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    transition: left .4s, top .4s;
+    transition-timing-function: linear;
+  }
+
+  &:before {
+    left: -7px;
+    top: -7px;
+  }
+
+  &:after {
+    left: 7px;
+    top: 7px;
+  }
+}
