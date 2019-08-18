@@ -1,0 +1,145 @@
+$animation-time: 3s;
+$animation-background: black;
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-indicator {
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $animation-background;
+
+  div[class^="level-"] {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dashed 3px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: relative;
+    &:not(.level-1) {
+      transform: rotate(69deg);
+    }
+
+    &:after {
+      content: '';
+      height: calc(100% + 6px);
+      width: calc(100% + 6px);
+      background: transparent;
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      border: 3px solid $animation-background;
+      border-radius: 50%;
+      border-bottom-color: $animation-background;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      transform: rotate(135deg);
+      box-sizing: border-box;
+      box-shadow: 0px 3px 1px $animation-background; // workaround for Browser bug or leaving a thin trace when borders of boxes of the same size overlap
+    }
+  }
+
+  .level-1 {
+    height: 100px;
+    width: 100px;
+    background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
+    animation: rotate $animation-time linear infinite;
+
+    .level-2 {
+      height: 89px;
+      width: 89px;
+      background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
+
+      .level-3 {
+        height: 82px;
+        width: 82px;
+        background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
+
+        .level-4 {
+          height: 75px;
+          width: 75px;
+          background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
+
+          .level-5 {
+            height: 66px;
+            width: 66px;
+            background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
+
+            .level-6 {
+              height: 59px;
+              width: 59px;
+              background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, blue 0%, transparent 53%);
+
+              .level-7 {
+                height: 53px;
+                width: 53px;
+                background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, yellow 0%, transparent 53%);
+
+                .level-8 {
+                  height: 47px;
+                  width: 47px;
+                  background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, brown 0%, transparent 53%);
+
+                  .level-9 {
+                    height: 40px;
+                    width: 40px;
+                    background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
+
+                    .level-10 {
+                      height: 34px;
+                      width: 34px;
+                      background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, blue 0%, transparent 53%);
+
+                      .level-11 {
+                        height: 30px;
+                        width: 30px;
+                        background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, #96E5CD 0%, transparent 53%);
+
+                        .level-12 {
+                          height: 26px;
+                          width: 26px;
+                          background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
+
+                          .level-13 {
+                            height: 20px;
+                            width: 19px;
+                            background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, gold 0%, transparent 53%);
+
+                            .level-14 {
+                              height: 15px;
+                              width: 15px;
+                              background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
+
+                              .level-15 {
+                                height: 10px;
+                                width: 10px;
+                                background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
