@@ -28,6 +28,7 @@ $animation-background: black;
     background-origin: border-box;
     background-clip: content-box, border-box;
     position: relative;
+    box-sizing: border-box;
     &:not(.level-1) {
       transform: rotate(69deg);
     }
@@ -53,79 +54,79 @@ $animation-background: black;
   }
 
   .level-1 {
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
     background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
-    animation: rotate $animation-time linear infinite;
+    // animation: rotate $animation-time linear infinite;
 
     .level-2 {
-      height: 89px;
-      width: 89px;
+      height: 98%;
+      width: 98%;
       background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
 
       .level-3 {
-        height: 82px;
-        width: 82px;
+        height: 97%;
+        width: 97%;
         background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
 
         .level-4 {
-          height: 75px;
-          width: 75px;
+          height: 96%;
+          width: 96%;
           background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
 
           .level-5 {
-            height: 66px;
-            width: 66px;
+            height: 97%;
+            width: 97%;
             background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
 
             .level-6 {
-              height: 59px;
-              width: 59px;
+              height: 99%;
+              width: 99%;
               background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, blue 0%, transparent 53%);
 
               .level-7 {
-                height: 53px;
-                width: 53px;
+                height: 100%;
+                width: 100%;
                 background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, yellow 0%, transparent 53%);
 
                 .level-8 {
-                  height: 47px;
-                  width: 47px;
+                  height: 95%;
+                  width: 95%;
                   background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, brown 0%, transparent 53%);
 
                   .level-9 {
-                    height: 40px;
-                    width: 40px;
+                    height: 95%;
+                    width: 95%;
                     background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
 
                     .level-10 {
-                      height: 34px;
-                      width: 34px;
+                      height: 96%;
+                      width: 96%;
                       background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, blue 0%, transparent 53%);
 
                       .level-11 {
-                        height: 30px;
-                        width: 30px;
+                        height: 97%;
+                        width: 97%;
                         background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, #96E5CD 0%, transparent 53%);
 
                         .level-12 {
-                          height: 26px;
-                          width: 26px;
+                          height: 100%;
+                          width: 100%;
                           background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, aqua 0%, transparent 53%);
 
                           .level-13 {
-                            height: 20px;
-                            width: 19px;
+                            height: 98%;
+                            width: 98%;
                             background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, gold 0%, transparent 53%);
 
                             .level-14 {
-                              height: 15px;
-                              width: 15px;
+                              height: 99%;
+                              width: 99%;
                               background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, pink 0%, transparent 53%);
 
                               .level-15 {
-                                height: 10px;
-                                width: 10px;
+                                height: 100%;
+                                width: 100%;
                                 background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
                               }
                             }

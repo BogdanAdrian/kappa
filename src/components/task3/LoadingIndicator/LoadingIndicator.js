@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoadingIndicator.scss';
 
-export default function LoadingIndicator() {
+export default function LoadingIndicator({ height, width }) {
   return (
     <div className='loading-indicator'>
       <div className='level-1'>
