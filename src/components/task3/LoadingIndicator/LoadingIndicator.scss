@@ -57,7 +57,7 @@ $animation-background: black;
     height: 100%;
     width: 100%;
     background-image: linear-gradient($animation-background, $animation-background), linear-gradient(to right, green 0%, transparent 53%);
-    // animation: rotate $animation-time linear infinite;
+    animation: rotate $animation-time linear infinite;
 
     .level-2 {
       height: 98%;
