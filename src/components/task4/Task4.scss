@@ -1,3 +1,5 @@
+$green-color: #99b657;
+
 .task-4 {
   height: 50%;
   width: 100%;
@@ -5,4 +7,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #000;
+  color: white;
+}
+
+.ant-modal {
+  width: 900px!important;
+
+  .ant-modal-footer {
+    .ant-btn.ant-btn-primary {
+      background-color: $green-color;
+      border-color: $green-color;
+    }
+  }
 }
