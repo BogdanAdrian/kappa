@@ -78,13 +78,13 @@ export default class IntervalsScheduler extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside.bind(this));
+    document.addEventListener("mousedown", this.handleClickOutside);
   }
 
   componentWillUnmount() {
     document.removeEventListener(
       "mousedown",
-      this.handleClickOutside.bind(this)
+      this.handleClickOutside
     );
   }
 
@@ -103,7 +103,7 @@ export default class IntervalsScheduler extends React.Component {
     });
   }
 
-  handleClickOutside(event) {
+  handleClickOutside = (event) => {
     const { intervalPopupRef } = this;
     if (!intervalPopupRef.current.contains(event.target)) {
       this.setState({ popoverVisible: false });
@@ -297,7 +297,7 @@ export default class IntervalsScheduler extends React.Component {
         hour < interval.startDatetime.hour) ||
       day > this.state.stopMeasurement.day ||
       (day === this.state.stopMeasurement.day &&
-        hour > this.state.stopMeasurement.hour)
+        hour >= this.state.stopMeasurement.hour)
     ) {
       return false;
     }
